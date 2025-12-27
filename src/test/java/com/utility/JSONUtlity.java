@@ -15,7 +15,7 @@ public class JSONUtlity {
 
 		Gson gson = new Gson();
 
-		String path = System.getProperty("user.dir") + "\\config\\config.json";
+		String path = System.getProperty("user.dir") + "//config//config.json";
 		File jsonFile = new File(path);
 		FileReader fileReader = null;
 		try {

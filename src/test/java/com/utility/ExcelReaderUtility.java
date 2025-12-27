@@ -20,7 +20,7 @@ public class ExcelReaderUtility {
 	@DataProvider(name = "LoginTestExcelDataProvider")
 	public static Iterator<User> readExcelFile(String fileName, String sheetName) {
 
-		String path = System.getProperty("user.dir") + "\\testData\\" + fileName;
+		String path = System.getProperty("user.dir") + "//testData//" + fileName;
 		File file = new File(path);
 		XSSFWorkbook xssfWorkbook = null;
 		XSSFSheet xssfSheet;
