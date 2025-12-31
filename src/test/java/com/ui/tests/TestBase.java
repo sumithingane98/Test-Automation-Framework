@@ -27,7 +27,7 @@ public class TestBase {
 	public void setup(
 			@Optional("chrome") String browser, 
 			@Optional("false") boolean isLambdaTest, 
-			@Optional("false") boolean isHeadless, 
+			@Optional("true") boolean isHeadless, 
 			ITestResult result
 			) {
 		
@@ -54,15 +54,15 @@ public class TestBase {
 		return homePage;
 	}
 	
-//	@AfterMethod(description = "Tear Down the Browser")
-//	public void tearDown() {
-//		logger.info("Tear Down the Browser...!!!");
-//		
-//		if(isLambdaTest) {
-//			LambdaTestUtility.quitSession(); // quit or close the broswer session on cloud
-//		}else {
-//			homePage.quit();		// on local
-//		}
-//	}
+	@AfterMethod(description = "Tear Down the Browser")
+	public void tearDown() {
+		logger.info("Tear Down the Browser...!!!");
+		
+		if(isLambdaTest) {
+			LambdaTestUtility.quitSession(); // quit or close the broswer session on cloud
+		}else {
+			homePage.quit();		// on local
+		}
+	}
 
 }
